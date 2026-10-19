@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stealth-scraper-mcp"
+dynamic = ["version"]
+description = "MCP server that scrapes any web page into clean, token-efficient Markdown, with TLS impersonation, a real-Chrome fallback and query-focused passage filtering."
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+keywords = ["mcp", "model-context-protocol", "web-scraping", "scraper", "markdown", "playwright", "llm", "agents"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+dependencies = [
+    "fastmcp>=4.1",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "curl_cffi>=0.15",
+    "trafilatura>=2.0",
+    "playwright>=1.50",
+    "pydantic>=2.8",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "cachetools>=5.3",
+]
+
+[project.urls]
+Repository = "https://github.com/markkkkkkkkkkkkkkkk/stealth-scraper-mcp"
+
+[project.scripts]
+stealth-scraper-mcp = "stealth_scraper_mcp.server:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "stealth_scraper_mcp.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,12 @@
+venv/
+offline-wheels/
+__pycache__/
+*.pyc
+*.log
+*.db
+*.db-wal
+*.db-shm
+build/
+dist/
+*.egg-info/
+.env

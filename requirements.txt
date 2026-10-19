@@ -1,0 +1,8 @@
+fastmcp
+fastapi
+uvicorn
+curl_cffi
+trafilatura
+playwright
+pydantic
+beautifulsoup4
